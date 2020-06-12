@@ -1,0 +1,26 @@
+name: Github Pages Deploy
+on:
+  push:
+    branches:
+      - working
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@master
+
+      - name: Build and Deploy
+        uses: JamesIves/github-pages-deploy-action@master
+        env:
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          BRANCH: master
+          FOLDER: public
+          BUILD_SCRIPT: npm install && npm run-script build >/dev/null
+          BASE_BRANCH: working
+      - name: Test Deployment
+        uses: bartlett705/npm-cy@f69478046d80aef1be0e17582c189a59bbfc9aa1
+        with:
+          args: run cy:run
+        env:
+          CYPRESS_baseUrl: https://www.rangoric.com
