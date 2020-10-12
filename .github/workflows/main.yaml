@@ -20,9 +20,3 @@ jobs:
           BASE_BRANCH: working
           CLEAN: true
           SINGLE_COMMIT: true
-      # - name: Test Deployment
-      #   uses: bartlett705/npm-cy@f69478046d80aef1be0e17582c189a59bbfc9aa1
-      #   with:
-      #     args: run cy:run
-      #   env:
-      #     CYPRESS_baseUrl: https://www.rangoric.com
