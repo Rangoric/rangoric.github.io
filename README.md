@@ -10,10 +10,15 @@ The content is from a fix of places, and the license files in the data folder wi
 
 Generally you can just use the website. If you want to pull it down locally or fork it to make it your own...
 
-- About Me folder contents should be deleted, it lacks a license and so needs specific permission. You can fill it with your own data though, so no need to delete the folder itself.
-- Blog folder has a license that allows it to stay.
+- Delete the following folders:
+  - `src/pages/about-me/*`
+  - `src/pages/resume/*`
+  - `static/*` -> Or replace the data in there with your own.
+    - This folder has a CNAME file for Github to set the url of the Github Pages
+    - It also has a Google identification file.
+- Remove my name from the top of this file and from `src/pages/index.js`
 - The MIT license can be changed to add your name and copyright notice.
-- You will likely want to update some of the text to be more you. Like my name at the top of this file and references to 'Rangoric', you likely want your own flair there.
+- Have at it.
 
 ## Automation
 

@@ -6,7 +6,7 @@ import SEO from "../components/seo"
 
 const IndexPage = () => (
   <>
-    <SEO title="Home" />
+    <SEO title="Wilson Gearld Mead III's Personal Site" />
     <h1>Welcome To My Personal Site</h1>
     <p>I am a Professional Full Stack Developer, whatever that happens to mean nowadays.</p>
     <p>But I also like to write, and also love to game.</p>
