@@ -19,7 +19,6 @@
     "gatsby-plugin-sharp": "^4.0.0",
     "gatsby-plugin-styled-components": "^5.0.0",
     "gatsby-source-filesystem": "^4.0.0",
-    "gatsby-transformer-sharp": "^4.0.0",
     "gh-pages": "^3.0.0",
     "prop-types": "^15.7.2",
     "react": "^17.0.2",
