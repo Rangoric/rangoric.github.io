@@ -55,13 +55,13 @@ type UOM<T, U extends string> = T & { __UOM: U };
 type ID<U extends string> = UOM<string, U>;
 
 interface IItem {
-  id: ID<"Item"> | UOM<string, "Item">;
+  id: ID<"Item">;
   name: string;
   description: string;
 }
 
 interface ICharacter {
-  id: ID<"Character"> | UOM<string, "Character">;
+  id: ID<"Character">;
   name: string;
   description: string;
   items: ID<"Item">[] | UOM<string, "Item">[];
