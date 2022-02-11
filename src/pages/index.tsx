@@ -13,6 +13,7 @@ const IndexPage = () => (
         <li><Link to={"/base-srd/"}>Base SRD</Link></li>
         <li><Link to={"/srd/"}>My SRD</Link></li>
         <li><Link to={"/magic/"}>Magic Decks</Link></li>
+        <li><Link to={"/blog/"}>Blog Posts</Link></li>
       </ul>
     </p>
     <p>If you want to know me as a person, you want to read <Link to="/about-me/">About Me</Link><br /></p>
