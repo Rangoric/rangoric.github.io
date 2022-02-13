@@ -1,3 +1,10 @@
+---
+---
+
+import SEO from "../../components/seo";
+
+<SEO title="Fun with Types: Units of Measure - Wilson Gearld Mead III's Blog Posts" />
+
 # Fun with Types: Units of Measure
 
 Units of measure are a way to tell 2 things of the same type apart in code.
@@ -185,3 +192,9 @@ You could multiply time by 5, which means it takes 5 times as long. So units of 
 ## Ok, I can think of a good use for this
 
 Absolutely, so much of the time, we are dealing with complex types that end up as either number of string. This lets you add a bit of meat to those types. And with type erasure, it comes with very little cost. I've found it useful for dealing with bugs with different IDs (hence using that as an example) because they are all strings, and with this I can make them different under the TypeScript hood. Cause I mean item.id starts looking the same the more you use it.
+
+## Read More
+
+This code is based on how F# does [units of measure](https://docs.microsoft.com/en-us/dotnet/fsharp/language-reference/units-of-measure).
+
+An alternative, that is especially useful if you are doing more math, are the Unit capabilities of [math.js](https://mathjs.org/docs/datatypes/units.html).
