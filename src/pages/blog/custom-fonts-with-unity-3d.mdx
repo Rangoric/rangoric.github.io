@@ -6,3 +6,54 @@ import SEO from "../../components/seo";
 <SEO title="Custom Fonts in Unity 3D's UI Toolkit - Wilson Gearld Mead III's Blog Posts" />
 
 # Custom Fonts in Unity 3D's UI Toolkit
+
+You may be thinking "Just read the documentation" instead of reading another blog post on some random topic. Well, you're mostly right, but the new `UI Toolkit` package for Unity3D is a work in progress, so the documentation isn't all that great for it.
+
+Also, I won't keep you long. 
+
+## What Do You Need
+
+The main file types we care about for this are:
+
+- `.ttf` file of the font you want to use.
+- `.uss` file. These are basically `css` files, but more limited. [Click here read how to setup Visual Studio](https://forum.unity.com/threads/uss-and-uxml-support-in-visual-studio.663916/)
+- `.tss` file. These are basically `css` files, but more limited. Yes same as above, and you can do the same thing to get them to "work well".
+- `.uxml` file. These are supported mostly out of the box, but you can do a bit of the above as with `.uss` files if you like.
+
+So for purposes of this example, I have the following files.
+
+- `Alata-Regular.ttf`
+- `NewTSSFile.tss`
+- `NewUXMLTemplate.uxml`
+
+I'm using the `tss` file instead of a `uss` file because they fill the same role, and I don't have enough to break it down just yet. If you want a `uss` file, then go ahead, and you will add it to the `tss` file in the Unity Inspector window for that `tss` file.
+
+The other things you need are best made in Unity in the folder you have the above files in
+
+- `Create` -> `UI Toolkit` -> `Text Settings`
+- `Create` -> `UI Toolkit` -> `Panel Settings`
+
+Now in the Inspector window for the `Panel Settings` file you created, you will add your theme (`tss`) file and your `Text Settings` file as the `Theme Style Sheet` and `Text Settings` respectively.
+
+Now in a Scene, add a gameobject of type `UIDocument` (Right Click the Scene game object area, `UI-Toolkit` -> `UIDocument`)
+
+For this object, you can assign `Panel Settings`, and `Source Asset`. You can assign the `Panel Settings` as you suspect, and the `Source Asset` is the `uxml` file you made.
+
+## There's nothing about Fonts yet
+
+I know, this is all the stuff that has to be set up for things to work.
+
+Now in the `tss` file, we can use that font and it will work.
+
+```
+VisualElement {
+    -unity-font-definition: none;
+    -unity-font: url(Alata-Regular.ttf);
+}
+```
+
+This will force all elements to use that font. The `-unity-font-defintion: none;` will show as a console error and I'm still sorting that out, but it still clears whatever inherited value would be there, allowing the next line to work. Also, anytime I change the font, I need this line.
+
+## That's it
+
+Yeap, that's all that's needed. I'm still sorting out `UI Toolkit` and how it works and what it means, but I'm normally a Web Developer, so I find it much easier to reason about than typical old school ui libraries.
