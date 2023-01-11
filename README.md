@@ -4,7 +4,7 @@ This is a repository that powers [www.rangoric.com](https://www.rangoric.com).
 
 Its built using [Gatsby JS](https://www.gatsbyjs.org/).
 
-The content is from a fix of places, and the license files in the data folder will have more information on that, while basic notes are here.
+The content is from a bunch of places, and the license files in the data folder will have more information on that, while basic notes are here.
 
 ## How to Fork & Make Your Own
 
